@@ -1,24 +1,39 @@
-<h1>Cadastro</h1>
-<a href="{{ route('login') }}">
-    <button>Voltar</button>
-</a>
-<form method="POST" action="/register">
-    @csrf
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    @vite(['resources/css/app.css', 'resources/js/app.ts'])
+</head>
+<body>
 
-    <input type="text" name="name" placeholder="Nome" required>
-    <br><br>
+    <h1>Cadastro</h1>
 
-    <input type="email" name="email" placeholder="Email" required>
-    <br><br>
+    <a href="{{ route('login') }}">
+        <button>Voltar</button>
+    </a>
 
-    <input type="password" name="password" placeholder="Senha" required>
-    <br><br>
+    <form method="POST" action="/register">
+        @csrf
 
-    <button type="submit">Cadastrar</button>
-</form>
+        <input type="text" name="name" placeholder="Nome" required>
+        <br><br>
 
-<br>
+        <input type="email" name="email" placeholder="Email" required>
+        <br><br>
 
-<a href="{{ route('login') }}">
-    <button>Já tenho conta</button>
-</a>
+        <input type="password" name="password" placeholder="Senha" required>
+        <br><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <br>
+
+    <a href="{{ route('login') }}">
+        <button>Já tenho conta</button>
+    </a>
+
+</body>
+</html>

@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Kodara Lab´s</title>
+    @vite(['resources/css/app.css', 'resources/js/app.ts'])
 </head>
 <body>
 

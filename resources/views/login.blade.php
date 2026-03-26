@@ -1,26 +1,40 @@
-<h1>Login</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    @vite(['resources/css/app.css', 'resources/js/app.ts'])
+</head>
+<body>
 
-<a href="{{ route('hello') }}">
-    <button>Voltar</button>
-</a>
-@if(session('error'))
-    <p>{{ session('error') }}</p>
-@endif
+    <h1>Login</h1>
 
-<form method="POST" action="/login">
-    @csrf
+    <a href="{{ route('hello') }}">
+        <button>Voltar</button>
+    </a>
 
-    <input type="email" name="email" placeholder="Email" required>
-    <br><br>
+    @if(session('error'))
+        <p>{{ session('error') }}</p>
+    @endif
 
-    <input type="password" name="password" placeholder="Senha" required>
-    <br><br>
+    <form method="POST" action="/login">
+        @csrf
 
-    <button type="submit">Entrar</button>
-</form>
+        <input type="email" name="email" placeholder="Email" required>
+        <br><br>
 
-<br>
+        <input type="password" name="password" placeholder="Senha" required>
+        <br><br>
 
-<a href="{{ route('register') }}">
-    <button>Criar conta</button>
-</a>
+        <button type="submit">Entrar</button>
+    </form>
+
+    <br>
+
+    <a href="{{ route('register') }}">
+        <button>Criar conta</button>
+    </a>
+
+</body>
+</html>
